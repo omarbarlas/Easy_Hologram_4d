@@ -1,0 +1,68 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Easy_Hologram_4D._4DImage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Landscape"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True" BackKeyPress="PhoneApplicationPage_BackKeyPress">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,3,0,0">
+            <TextBlock x:Name="txtImageName" Text="4D Image" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="480" Height="480">
+            <Grid x:Name="PyramidBase" HorizontalAlignment="Center" Margin="0"  VerticalAlignment="Center" Width="96" Height="96" Background="#4CFFFFFF">
+                <TextBlock x:Name="txtInstructions" Margin="6,12" TextWrapping="Wrap" Text="Place holograpic pyramid on this rectangle" FontSize="12" Foreground="White" TextAlignment="Center"/>
+            </Grid>
+
+            <Grid HorizontalAlignment="Center" Width="192" Height="144" VerticalAlignment="Top">
+                <Image x:Name="img0Deg" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top"  Stretch="UniformToFill" Source="Assets/0Deg Image.png" Tap="img0Deg_Tap" />
+            </Grid>
+            
+            <Grid HorizontalAlignment="Right" Width="144" Height="192" VerticalAlignment="Center">
+                <Image x:Name="img90Deg" HorizontalAlignment="Center"  VerticalAlignment="Center" Source="Assets/90Degrees Image.png" Tap="img90Deg_Tap" Stretch="UniformToFill" >
+                </Image>
+            </Grid>
+
+            <Grid HorizontalAlignment="Center" Width="192" Height="144" VerticalAlignment="Bottom">
+                <Image x:Name="imgHV_Flip" HorizontalAlignment="Center"  Margin="0" VerticalAlignment="Bottom"  Stretch="UniformToFill" Source="Assets/FlipHV Image.png" Tap="imgHV_Flip_Tap" />
+            </Grid>
+            
+            <Grid HorizontalAlignment="Left" Width="144" Height="192" VerticalAlignment="Center">
+                <Image x:Name="imgNeg90Deg" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="Assets/Neg90Deg Image.png" Tap="imgNeg90Deg_Tap" Stretch="UniformToFill" />
+            </Grid>
+        </Grid>
+    </Grid>
+
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" x:Name="ApplicationBar">
+            <shell:ApplicationBarIconButton IconUri="/Assets/new.png" Text="New" x:Name="btnNew" Click="btnNew_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/save.png" Text="Save" x:Name="btnSave" Click="btnSave_Click" />
+            <shell:ApplicationBarIconButton IconUri="/Assets/viewhologram.png" Text="Hologram" x:Name="btnHologram" Click="btnHologram_Click"/>
+            <shell:ApplicationBarIconButton IconUri="/Assets/settings.png" Text="Settings" x:Name="btnSettings" Click="btnSettings_Click"/>
+
+            <!--<shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>-->
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>

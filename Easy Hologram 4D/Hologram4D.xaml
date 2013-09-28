@@ -1,0 +1,44 @@
+﻿<Window x:Name="Hologram4D" x:Class="Easy_Hologram_4D.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Easy Hologram 4D" Height="1080" Width="1920" Background="Black" Icon="Assets/logo.png" WindowState="Maximized">
+
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="1015*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock x:Name="txtFileName" HorizontalAlignment="Left" Height="20" Margin="10,4,0,0" TextWrapping="Wrap" Text="4D Hologram File Name" VerticalAlignment="Top" Foreground="White" Width="1880"/>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1012" Height="1012">
+            
+            <Grid x:Name="PyramidBase" HorizontalAlignment="Center" Margin="0"  VerticalAlignment="Center" Width="180" Height="180" Background="#4CFFFFFF" MouseUp="PyramidBase_MouseUp">
+                <TextBlock x:Name="txtInstructions" Margin="6,12" TextWrapping="Wrap" Text="Tap Here and place holograpic pyramid on this rectangle" FontSize="22" Foreground="White" TextAlignment="Center"/>
+            </Grid>
+
+            <Grid HorizontalAlignment="Center" Width="398" Height="300" VerticalAlignment="Top" Margin="0">
+                <Image x:Name="img0Deg" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Top"  Stretch="UniformToFill" Source="Assets/0Deg Image.png" />
+            </Grid>
+
+            <Grid HorizontalAlignment="Right" Width="300" Height="398" VerticalAlignment="Center" Margin="0">
+                <Image x:Name="img90Deg" HorizontalAlignment="Center"  VerticalAlignment="Center" Source="Assets/90Degrees Image.png" Stretch="UniformToFill" >
+                </Image>
+            </Grid>
+
+            <Grid HorizontalAlignment="Center" Width="398" Height="300" VerticalAlignment="Bottom" Margin="0">
+                <Image x:Name="imgHV_Flip" HorizontalAlignment="Center"  Margin="0" VerticalAlignment="Bottom"  Stretch="UniformToFill" Source="Assets/FlipHV Image.png"/>
+            </Grid>
+
+            <Grid HorizontalAlignment="Left" Width="300" Height="398" VerticalAlignment="Center">
+                <Image x:Name="imgNeg90Deg" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="Assets/Neg90Deg Image.png"  Stretch="UniformToFill" />
+            </Grid>
+        </Grid>
+    </Grid>
+
+
+
+
+
+</Window>

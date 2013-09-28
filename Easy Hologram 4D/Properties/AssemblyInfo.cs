@@ -8,7 +8,7 @@ using System.Windows;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Easy Hologram 4D")]
-[assembly: AssemblyDescription("Hologram Viewer App using Holographic Pyramid")]
+[assembly: AssemblyDescription("Easy Hologram 4D App is using Holographic Pyramid")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Easy Hologram 4D")]

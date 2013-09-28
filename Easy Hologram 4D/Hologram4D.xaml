@@ -13,7 +13,7 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="1012" Height="1012">
-            
+
             <Grid x:Name="PyramidBase" HorizontalAlignment="Center" Margin="0"  VerticalAlignment="Center" Width="180" Height="180" Background="#4CFFFFFF" MouseUp="PyramidBase_MouseUp">
                 <TextBlock x:Name="txtInstructions" Margin="6,12" TextWrapping="Wrap" Text="Tap Here and place holograpic pyramid on this rectangle" FontSize="22" Foreground="White" TextAlignment="Center"/>
             </Grid>
@@ -35,7 +35,7 @@
                 <Image x:Name="imgNeg90Deg" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="Assets/Neg90Deg Image.png"  Stretch="UniformToFill" />
             </Grid>
         </Grid>
-        <Button x:Name="btnSettings" Content="&#xE115;" HorizontalAlignment="Left" Height="31" Margin="1862,21,0,0" Grid.Row="1" VerticalAlignment="Top" Width="28" FontFamily="Segoe UI Symbol" Click="btnSettings_Click"/>
+        <Button x:Name="btnSettings" Content="&#xE115;" HorizontalAlignment="Left" Height="30" Margin="1862,4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="28" FontFamily="Segoe UI Symbol" Click="btnSettings_Click"/>
     </Grid>
 
 

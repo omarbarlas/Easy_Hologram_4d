@@ -202,6 +202,11 @@ namespace Easy_Hologram_4D
 
             if (ImageFileName.ToLower().EndsWith(".4dh")==true)
                 OpenFlyer(ImageFileName);
+        }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Settings screen not added yet");
         } 
 
     }

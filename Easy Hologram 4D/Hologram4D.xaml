@@ -35,6 +35,7 @@
                 <Image x:Name="imgNeg90Deg" HorizontalAlignment="Center" VerticalAlignment="Center"  Source="Assets/Neg90Deg Image.png"  Stretch="UniformToFill" />
             </Grid>
         </Grid>
+        <Button x:Name="btnSettings" Content="&#xE115;" HorizontalAlignment="Left" Height="31" Margin="1862,21,0,0" Grid.Row="1" VerticalAlignment="Top" Width="28" FontFamily="Segoe UI Symbol" Click="btnSettings_Click"/>
     </Grid>
 
 

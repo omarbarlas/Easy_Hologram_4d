@@ -22,6 +22,10 @@ namespace Easy_Hologram_4D
     /// </summary>
     public partial class MainWindow : Window
     {
+
+       public string ImageFileName;
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,7 +35,8 @@ namespace Easy_Hologram_4D
 
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            OpenFlyer(@"k:\Second Test");
+            if (ImageFileName != "")
+            OpenFlyer(ImageFileName);
         }
 
      

@@ -35,8 +35,9 @@ namespace Easy_Hologram_4D
 
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            if (ImageFileName != "")
-            OpenFlyer(ImageFileName);
+            if (ImageFileName != "" && ImageFileName != null)
+                if (ImageFileName.EndsWith(".4dh") == true)
+                  OpenFlyer(ImageFileName);
         }
 
      

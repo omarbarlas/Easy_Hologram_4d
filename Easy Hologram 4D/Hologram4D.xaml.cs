@@ -195,6 +195,14 @@ namespace Easy_Hologram_4D
             }
         }
 
+        private void Hologram4D_Drop(object sender, DragEventArgs e)
+        {
+            ImageFileName = (string)((DataObject)e.Data).GetFileDropList()[0];
+
+            if (ImageFileName.EndsWith(".4dh")==true)
+                OpenFlyer(ImageFileName);
+        } 
+
     }
 
     public class Design
